@@ -30,7 +30,7 @@ h1 {
   width: 20px;
   height: 20px;
   background: white;
-  transition: 500ms;
+  /* transition: 500ms; */
 }
 
 #grid input[type='checkbox']:checked {

@@ -170,13 +170,13 @@ function $(selector, container) {
       if (this.autoplay) {
         this.timer = setTimeout(function() {
           me.next();
-        }, 1000);
+        }, 100);
       }
     },
   };
 })();
 
-var lifeView = new LifeView(document.getElementById('grid'), 24);
+var lifeView = new LifeView(document.getElementById('grid'), 48);
 
 (function() {
   var buttons = {
@@ -191,9 +191,10 @@ var lifeView = new LifeView(document.getElementById('grid'), 24);
     buttons.next.disabled = this.checked;
 
     if (this.checked) {
-      lifeView.autoplay = this.checked;
+      lifeView.autoplay = true;
       lifeView.next();
     } else {
+      lifeView.autoplay = false;
       clearTimeout(lifeView.timer);
     }
   });
